@@ -1,0 +1,20 @@
+<h1>Delete Book</h1>
+<p>Find me in app/views/books/delete.html.erb</p>
+<div class="Books delete">
+  <%= form_for(@book,:method=> 'delete') do |f| %>
+  <p> Are you sure you want to permanently delete this subject </p>
+  <p>
+    <strong>Title:</strong>
+    <%= @book.title %>
+    <%= @book.author %>
+    <%= @book.date %>
+    <%= @book.price %>
+  </p>
+  <div class="form=buttons">
+    <%= f.submit("Delete Subject") %>
+  </div>
+  <% end %>
+</div>
+
+
+<%= link_to 'Back', books_path %>
